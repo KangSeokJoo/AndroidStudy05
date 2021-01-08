@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Events.EventMain"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/EventAct_TV1"
+        android:background="#ffebee"
+        android:textColor="#747474"
+        android:text="onClick, onLongClick"/>
+    <EditText
+        android:id="@+id/EventAct_EDT1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="포커스 체인지"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/EventAct_EDT2"
+        android:hint="포커스 체인지"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:id="@+id/EventAct_TV2"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/EventAct_View"
+        android:background="@color/teal_700"></View>
+
+</LinearLayout>
