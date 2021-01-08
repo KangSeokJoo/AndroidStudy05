@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Selcet_Step4BTN"
-        android:text="알림 띄우기"
+        android:text="툴바 사용하기"
         android:layout_marginTop="20dp"
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintTop_toBottomOf="@id/Selcet_Step3BTN"

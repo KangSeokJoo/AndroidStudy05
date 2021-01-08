@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.jinasoft.study05_ksj.Events.EventMain;
 import com.jinasoft.study05_ksj.Maps.MapsActivity;
 import com.jinasoft.study05_ksj.MyStyleToast.MyStyleToastMain;
+import com.jinasoft.study05_ksj.ToolBar.ToolBarMain;
 
 
 public class SelectStudyList extends AppCompatActivity {
@@ -42,11 +43,11 @@ public class SelectStudyList extends AppCompatActivity {
             Intent intent = new Intent(SelectStudyList.this, MyStyleToastMain.class);
             startActivity(intent);
         });
-//        btn4.setOnClickListener(view -> {
-//            Log.d("btn4_btn", "활성");
-//            Intent intent = new Intent(SelectStudyList.this, NotificationMain.class);
-//            startActivity(intent);
-//        });
+        btn4.setOnClickListener(view -> {
+            Log.d("btn4_btn", "활성");
+            Intent intent = new Intent(SelectStudyList.this, ToolBarMain.class);
+            startActivity(intent);
+        });
 //        btn5.setOnClickListener(view -> {
 //            Log.d("btn5_btn", "활성");
 //            Intent intent = new Intent(SelectStudyList.this, AlarmMain.class);
