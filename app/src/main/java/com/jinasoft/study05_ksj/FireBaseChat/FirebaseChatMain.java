@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputFilter;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,12 +26,19 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
+import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 import com.jinasoft.study05_ksj.R;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -38,6 +47,8 @@ public class FirebaseChatMain extends AppCompatActivity implements GoogleApiClie
     private static final String MESSAGE_CHILD = "messages"; // 메세지 보내는 변수 스트링
     private DatabaseReference mDatabaseReference; // 메세지 보내는 변수
     private EditText mMessageEditText;
+    private FirebaseRemoteConfig mFirebaseRemoteConfig;
+    private static final String TAG = FirebaseChatMain.class.getSimpleName();
 
     //Firebae 인스턴스
     private FirebaseAuth firebaseAuth;
@@ -59,6 +70,8 @@ public class FirebaseChatMain extends AppCompatActivity implements GoogleApiClie
                 startActivity(new Intent(this, SignInActivity.class));
                 finish();
                 return true;
+            case R.id.crash_menu:
+                throw new RuntimeException("치명적인 버그");
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -161,6 +174,53 @@ public class FirebaseChatMain extends AppCompatActivity implements GoogleApiClie
         //리사이클러뷰에 레이아웃 매니저와 어댑터 설정
         mMessageRecyclearView.setLayoutManager(new LinearLayoutManager(this));
         mMessageRecyclearView.setAdapter(mFireBaseAdapter);
+
+//        //파이어 베이스 리모트 폰피그 초기화
+//        mFirebaseRemoteConfig = FirebaseRemoteConfig.getInstance();
+//        //파이어 베이스 리모트 폰피그 설정
+//        FirebaseRemoteConfigSettings firebaseRemoteConfigSettings = new FirebaseRemoteConfigSettings.Builder
+//                .setDeveloperModeEnable(true)
+//                .bulid();
+//        //인터넷 연결이 안 되었을 때 기본값 정의
+//        Map<String, Object>defaultConfiMap = new HashMap<>();
+//        defaultConfiMap.put("message_lenghth", 10L);
+//        //설정과 기본값 설정
+//        mFirebaseRemoteConfig.setConfigSettings(firebaseRemoteConfigSettings);
+//        mFirebaseRemoteConfig.setDefaults(defaultConfiMap);
+//        //원격 구성 가져오기
+//        fetchConfig();
+//    }
+//    //원격 구성 가져오기
+//    private void fetchConfig() {
+//        long cacheExpiration = 3600; //1시간
+//        // 개발자 모드라면 0초 하기
+//        if (mFirebaseRemoteConfig.getInfo().getConfigSettings().isDeveloperModeEnabled()){
+//            cacheExpiration = 0;
+//        }
+//        mFirebaseRemoteConfig.fetch(cacheExpiration).addOnSuccessListener(new OnSuccessListener<Void>() {
+//            @Override
+//            public void onSuccess(Void aVoid) {
+//                mFirebaseRemoteConfig.activateFetched();
+//                applyRetrievedLengthLimit();
+//            }
+//        }).addOnSuccessListener(new OnFailureListener() {
+//
+//            @Override
+//            public void onFailure(@NonNull Exception e) {
+//                //원격 구성 가져오기 실패
+//                Log.d(TAG,"원격 구성 가져오는데 실패했습니다."+ e.getMessage());
+//                applyRetrievedLengthLimit();
+//            }
+//        });
+//    }
+//
+//    private void applyRetrievedLengthLimit() {
+//        Long messageLength = mFirebaseRemoteConfig.getLong("message_length");
+//        mMessageEditText.setFilters(new InputFilter[]{
+//                new InputFilter.LengthFilter(messageLength.intValue())
+//        }); Log.d(TAG , "메세지길이 : " + messageLength);   //오류가 있다..
+
+        //Firebase 초대 기능의 지원을 중단했으며 2020년 1월 24일부터는 지원이 전면 종료됩니다.
     }
 
     @Override
