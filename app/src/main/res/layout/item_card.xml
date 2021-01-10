@@ -13,6 +13,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="?android:attr/selectableItemBackground"
         android:orientation="vertical">
 <!--        상단-->
         <RelativeLayout
@@ -28,6 +29,10 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/title_text"
                 android:layout_alignParentBottom="true"
+                android:shadowColor="#000000"
+                android:shadowDx="1.0"
+                android:shadowDy="1.0"
+                android:shadowRadius="1.0"
                 android:padding="16dp"
                 android:text="Title"
                 android:textColor="#ffffff"
@@ -41,6 +46,8 @@
             android:id="@+id/contents_text"
             android:padding="16dp"
             android:text="Contents"/>
+
+
 
 <!--        버튼-->
         <LinearLayout

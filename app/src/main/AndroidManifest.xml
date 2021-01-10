@@ -16,7 +16,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
-        <activity android:name=".RecyclerView.RecyclerViewMain"></activity>
+        <activity android:name=".FirebaseChat"></activity>
+        <activity android:name=".RealmDB.RealmDBMain" />
+        <activity
+            android:name=".SideNavigation.SideMain"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".SwipeRefresh.SwipeRefreshMain" />
+        <activity android:name=".RecyclerView.RecyclerViewMain" />
         <activity
             android:name=".ToolBar.ToolBarMain"
             android:theme="@style/Theme.AppCompat.NoActionBar" />

@@ -58,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Selcet_Step5BTN"
-        android:text="알람 매니저 실습"
+        android:text="리사이클뷰 + 카드뷰"
         android:layout_marginTop="20dp"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintTop_toBottomOf="@id/Selcet_Step4BTN"
@@ -70,7 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Selcet_Step6BTN"
-        android:text="카운트다운"
+        android:text="아래로 당겨서 로딩하기"
         app:layout_constraintVertical_bias="0"
         android:layout_marginTop="20dp"
         app:layout_constraintTop_toBottomOf="@id/Selcet_Step5BTN"
@@ -82,7 +82,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Selcet_Step7BTN"
-        android:text="데이터베이스 활용하기"
+        android:text="옆에서 나타나는 메뉴"
         android:layout_marginTop="20dp"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintTop_toBottomOf="@id/Selcet_Step6BTN"
@@ -90,5 +90,16 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Selcet_Step8BTN"
+        android:text="Realm을 이용한 DB"
+        android:layout_marginTop="20dp"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toBottomOf="@id/Selcet_Step7BTN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

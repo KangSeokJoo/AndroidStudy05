@@ -6,10 +6,15 @@ import android.util.Log;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.jinasoft.study05_ksj.Events.EventMain;
 import com.jinasoft.study05_ksj.Maps.MapsActivity;
 import com.jinasoft.study05_ksj.MyStyleToast.MyStyleToastMain;
+import com.jinasoft.study05_ksj.RealmDB.RealmDBMain;
+import com.jinasoft.study05_ksj.RecyclerView.RecyclerViewMain;
+import com.jinasoft.study05_ksj.SideNavigation.SideMain;
+import com.jinasoft.study05_ksj.SwipeRefresh.SwipeRefreshMain;
 import com.jinasoft.study05_ksj.ToolBar.ToolBarMain;
 
 
@@ -27,6 +32,7 @@ public class SelectStudyList extends AppCompatActivity {
         Button btn5 = (Button) findViewById(R.id.Selcet_Step5BTN);
         Button btn6 = (Button) findViewById(R.id.Selcet_Step6BTN);
         Button btn7 = (Button) findViewById(R.id.Selcet_Step7BTN);
+        Button btn8 = (Button) findViewById(R.id.Selcet_Step8BTN);
 //
         btn1.setOnClickListener(view -> {
             Log.d("btn1_btn", "활성");
@@ -48,21 +54,26 @@ public class SelectStudyList extends AppCompatActivity {
             Intent intent = new Intent(SelectStudyList.this, ToolBarMain.class);
             startActivity(intent);
         });
-//        btn5.setOnClickListener(view -> {
-//            Log.d("btn5_btn", "활성");
-//            Intent intent = new Intent(SelectStudyList.this, AlarmMain.class);
-//            startActivity(intent);
-//        });
-//        btn6.setOnClickListener(view -> {
-//            Log.d("btn6_btn", "활성");
-//            Intent intent = new Intent(com.jinasoft.study03_ksj.SelectStudyList.this, CountMain.class);
-//            startActivity(intent);
-//        });
-//        btn7.setOnClickListener(view -> {
-//            Log.d("btn7_btn", "활성");
-//            Intent intent = new Intent(com.jinasoft.study03_ksj.SelectStudyList.this, DataBaseMain.class);
-//            startActivity(intent);
-//        });
+        btn5.setOnClickListener(view -> {
+            Log.d("btn5_btn", "활성");
+            Intent intent = new Intent(SelectStudyList.this, RecyclerViewMain.class);
+            startActivity(intent);
+        });
+        btn6.setOnClickListener(view -> {
+            Log.d("btn6_btn", "활성");
+            Intent intent = new Intent(SelectStudyList.this, SwipeRefreshMain.class);
+            startActivity(intent);
+        });
+        btn7.setOnClickListener(view -> {
+            Log.d("btn7_btn", "활성");
+            Intent intent = new Intent(SelectStudyList.this, SideMain.class);
+            startActivity(intent);
+        });
+        btn8.setOnClickListener(view -> {
+            Log.d("btn8_btn", "활성");
+            Intent intent = new Intent(SelectStudyList.this, RealmDBMain.class);
+            startActivity(intent);
+        });
 
 
 //        btn.setOnClickListener(new View.OnClickListener() {  원래 쓰던 Onclick 식
