@@ -16,7 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
-        <activity android:name=".FirebaseChat"></activity>
+        <activity android:name=".FireBaseChat.SignInActivity"></activity>
+        <activity android:name=".FireBaseChat.item_message" />
+        <activity android:name=".FireBaseChat.FirebaseChatMain" />
         <activity android:name=".RealmDB.RealmDBMain" />
         <activity
             android:name=".SideNavigation.SideMain"

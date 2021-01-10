@@ -6,9 +6,9 @@ import android.util.Log;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.jinasoft.study05_ksj.Events.EventMain;
+import com.jinasoft.study05_ksj.FireBaseChat.FirebaseChatMain;
 import com.jinasoft.study05_ksj.Maps.MapsActivity;
 import com.jinasoft.study05_ksj.MyStyleToast.MyStyleToastMain;
 import com.jinasoft.study05_ksj.RealmDB.RealmDBMain;
@@ -33,6 +33,7 @@ public class SelectStudyList extends AppCompatActivity {
         Button btn6 = (Button) findViewById(R.id.Selcet_Step6BTN);
         Button btn7 = (Button) findViewById(R.id.Selcet_Step7BTN);
         Button btn8 = (Button) findViewById(R.id.Selcet_Step8BTN);
+        Button btn9 = (Button) findViewById(R.id.Selcet_Step9BTN);
 //
         btn1.setOnClickListener(view -> {
             Log.d("btn1_btn", "활성");
@@ -72,6 +73,11 @@ public class SelectStudyList extends AppCompatActivity {
         btn8.setOnClickListener(view -> {
             Log.d("btn8_btn", "활성");
             Intent intent = new Intent(SelectStudyList.this, RealmDBMain.class);
+            startActivity(intent);
+        });
+        btn9.setOnClickListener(view -> {
+            Log.d("btn9_btn", "활성");
+            Intent intent = new Intent(SelectStudyList.this, FirebaseChatMain.class);
             startActivity(intent);
         });
 
